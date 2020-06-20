@@ -6,18 +6,18 @@
 <div class="callout callout-info">
     <p>{{session('sukses')}}</p>
   </div>
-  @endif 
+  @endif
 
   <div class="panel panel-primary">
       <div class="panel-heading"><center>SEMUA NAMA GURU SMA NEGERI 6 SOLOK SELATAN TELAH DISESUAIKAN</center></div>
-        <div class="panel-body">					
-          <div class="md-form"> 
+        <div class="panel-body">
+          <div class="md-form">
             <div class="box-header">
               <h3 class="box-title">SMA NEGERI 6 SOLOK SELATAN</h3>
               <p>KEMENTRIAN PENDIDIKAN DAN KEBUDAYAAN REPUBLIK INDONESIA</p>
 
               <p><a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-default"><i class="fa fa-plus-circle"></i> Tambah Data</a> <span>
-                  <a href="{{url('laporanguru')}}" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-print"></i> Print Data</a> </span>  <span> 
+                  <a href="{{url('laporanguru')}}" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-print"></i> Print Data</a> </span>  <span>
                   <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-refresh"></i> Refresh Halaman</a> </span></p>
               <hr class="panel panel-primary"> </p></div>
               <!-- /.box-header -->
@@ -64,7 +64,7 @@
   </section>
 </div>
 @endsection
-        
+
   <div class="modal fade" id="modal-default">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -124,7 +124,7 @@
                     <option value="Petugas Kebersihan">Petugas Kebersihan</option>
                   </select>
                 </div>
-            
+
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>

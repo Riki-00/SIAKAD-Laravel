@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html> 
+<html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +8,18 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="/assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{asset('/assets/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="/assets/bower_components/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{('/assets/bower_components/font-awesome/css/font-awesome.min.css')}}">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="/assets/bower_components/Ionicons/css/ionicons.min.css">
+<link rel="stylesheet" href="{{('/assets/bower_components/Ionicons/css/ionicons.min.css')}}">
   <!-- DataTables -->
-  <link rel="stylesheet" href="/assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+<link rel="stylesheet" href="{{('/assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css')}}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="/assets/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="{{('/assets/dist/css/AdminLTE.min.css')}}">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="/assets/dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="{{('/assets/dist/css/skins/_all-skins.min.css')}}">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -339,20 +339,20 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
-<script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="{{('/assets/bower_components/jquery/dist/jquery.min.js')}}"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="{{('/assets/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <!-- DataTables -->
-<script src="/assets/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="/assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="{{('/assets/bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{('/assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
 <!-- SlimScroll -->
-<script src="/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="{{('/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
 <!-- FastClick -->
-<script src="/assets/bower_components/fastclick/lib/fastclick.js"></script>
+<script src="{{('/assets/bower_components/fastclick/lib/fastclick.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="/assets/dist/js/adminlte.min.js"></script>
+<script src="{{('/assets/dist/js/adminlte.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="/assets/dist/js/demo.js"></script>
+<script src="{{('/assets/dist/js/demo.js')}}"></script>
 <script>
   $(document).ready(function () {
     $('.sidebar-menu').tree()
@@ -370,7 +370,7 @@
       'autoWidth'   : false
     })
   });
-  
+
   $(window).on('load', function (){
     // $('#show_nama_guru')();
     // console.log('guru');
@@ -381,14 +381,14 @@
       success: function(data){
         var guru = jQuery.parseJSON(JSON.stringify(data));
         console.log(guru);
-        
+
         $.each(guru, function (v, k) {
           $('#show_nama_guru')
                 .append($("<option></option>")
                     .attr("value", k.id)
                     .text(k.nama_guru));
         });
-        
+
       }
     })
   })
@@ -403,14 +403,14 @@
       success: function(data){
         var walkes = jQuery.parseJSON(JSON.stringify(data));
         console.log(walkes);
-        
+
         $.each(walkes, function (v, k) {
           $('#show_kelas_walas')
                 .append($("<option></option>")
                     .attr("value", k.id)
                     .text(k.kelas_walas));
         });
-        
+
       }
     })
   })
@@ -425,14 +425,14 @@
       success: function(data){
         var pelajaran = jQuery.parseJSON(JSON.stringify(data));
         console.log(pelajaran);
-        
+
         $.each(pelajaran, function (v, k) {
           $('#show_mata_pelajaran')
                 .append($("<option></option>")
                     .attr("value", k.id)
                     .text(k.mata_pelajaran));
         });
-        
+
       }
     })
   })
@@ -447,18 +447,18 @@
       success: function(data){
         var siswa = jQuery.parseJSON(JSON.stringify(data));
         console.log(siswa);
-        
+
         $.each(siswa, function (v, k) {
           $('#show_nama_siswa')
                 .append($("<option></option>")
                     .attr("value", k.id)
                     .text(k.nama_siswa));
         });
-        
+
       }
     })
   })
 
 </script>
 </body>
-</html> 
+</html>
