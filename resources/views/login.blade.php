@@ -28,7 +28,7 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition login-page" style="background-color: #808080; background-image: url('/assets/dist/img/login.jpg'); background-repeat: no-repeat;">
+<body class="hold-transition login-page" style="background-color: #808080; background-image: url('/assets/dist/img/login.jpg'); background-repeat: no-repeat; background-size: 100%">
 <div class="login-box">
   <!-- /.login-logo -->
   <div class="login-box-body">
@@ -41,15 +41,26 @@
         <h4 class="text-center"><i><b>Login System</b></i></h4>
 		</div>
 
-    <form action="/assets/index2.html" method="post">
+    <form action="/postlogin" method="post">
+        {{csrf_field()}}
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Username / NIP / NIS">
+        <input type="text" class="form-control" name="email" placeholder="Username / NIP / NIS" required>
         <span class="glyphicon glyphicon-user bg-blue-active form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="password" class="form-control" name="password" placeholder="Password" required>
         <span class="glyphicon glyphicon-lock bg-blue-active form-control-feedback"></span>
       </div>
+      <div class="form-group has-feedback">
+        <select name="role" id="" class="form-control" required>
+            <option value="">--Silahkan Pilih--</option>
+            <option value="1">Admin</option>
+            <option value="2">Guru</option>
+            <option value="3">Siswa</option>
+        </select>
+        <span class="glyphicon glyphicon-lock bg-blue-active form-control-feedback"></span>
+      </div>
+      <br><br>
       <div class="row">
         <!-- /.col -->
         <div class="col-xs-12">

@@ -8,18 +8,18 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-<link rel="stylesheet" href="{{asset('/assets/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="/assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
-<link rel="stylesheet" href="{{asset('/assets/bower_components/font-awesome/css/font-awesome.min.css')}}">
+  <link rel="stylesheet" href="/assets/bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
-<link rel="stylesheet" href="{{asset('/assets/bower_components/Ionicons/css/ionicons.min.css')}}">
+  <link rel="stylesheet" href="/assets/bower_components/Ionicons/css/ionicons.min.css">
   <!-- DataTables -->
-<link rel="stylesheet" href="{{asset('/assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css')}}">
+  <link rel="stylesheet" href="/assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{asset('/assets/dist/css/AdminLTE.min.css')}}">
+  <link rel="stylesheet" href="/assets/dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="{{asset('/assets/dist/css/skins/_all-skins.min.css')}}">
+  <link rel="stylesheet" href="/assets/dist/css/skins/_all-skins.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,11 +37,11 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="/assets/index2.html" class="logo">
+    <a href="{{url('/admin/index')}}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>SISFO</b></span>
+      <span class="logo-mini"><b>ADM</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>SISFO AKADEMIK</b></span>
+      <span class="logo-lg"><b>ADMINISTRATOR</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -58,24 +58,24 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="/assets/dist/img/avatar5.png" class="user-image" alt="User Image">
-              <span class="hidden-xs">{{auth()->user()->name}}</span>
+              <img src="/assets/dist/img/admin.png" class="user-image" alt="User Image">
+              <span class="hidden-xs">{{auth()->user()->name}} &nbsp; <i class="fa fa-angle-down"></i></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="/assets/dist/img/avatar5.png" class="img-circle" alt="User Image">
+                <img src="/assets/dist/img/admin.png" class="img-circle" alt="User Image">
 
                 <p>
-                    {{auth()->user()->name}} <br>
-                    {{-- {{auth()->user()->role}} --}}
-                  <small>{{auth()->user()->email}}</small>
+                    {{auth()->user()->name}}
+                    {{auth()->user()->role}}
+                    <small>{{auth()->user()->email}}</small>
                 </p>
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-right">
-                  <a href="/logout" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="/logout" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i>&nbsp;Sign out</a>
                 </div>
               </li>
             </ul>
@@ -88,16 +88,16 @@
   <!-- =============================================== -->
 
   <!-- Left side column. contains the sidebar -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="user-panel">
         <div class="pull-left image">
-          <img src="/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="/assets/dist/img/admin.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>ADMINISTRATOR</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -124,9 +124,51 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-        <!-- Dashboard Admin || SMA NEGERI 6 SOLOK SELATAN -->
-      </h1>
+    <h1>
+        WELCOME ADMINISTRATOR
+        <small>SMA NEGERI 6 SOLOK SELATAN</small>
+      </h1><br>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box box-success">
+            <div class="box-header with-border">
+            <center><h3 class="box-title"><font color="black" face="arial"><b><i class="fa fa-book"></i>&emsp;MOTIVASI KERJA ISLAMI&emsp;<i class="fa fa-book"></i></b></font></h3></center>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+            <center><font color="black" face="arial"><b>"TAK PEDULI SEBERAPA KERAS KAMU BEKERJA, TIDAK AKAN ADA YANG BERHASIL TANPA PERTOLONGAN ALLAH."</b></font></center>
+            <center><font color="black" face="arial"><b>"MAKA BANTULAH DIRIMU DENGAN MEMINTA PERTOLONGAN KEPADA ALLAH."</b></font></center>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+      <div class="callout callout-info">
+        <p><font color="black" face="arial">LAMPIRAN II PERATURAN GUBERNUR SUMATERA BARAT</font></p>
+        <p><font color="black" face="arial">NOMOR &emsp;&emsp;: 41 TAHUN 2018</font></p>
+        <P><font color="black" face="arial">TENTANG &emsp;: PEMBENTUKAN ORGANISASI DAN TATA KERJA SATUAN PENDIDIKAN DAERAH DINAS PENDIDIKAN PROVINSI SUMATERA BARAT</font></P>
+        <center><P><b><font color="black" face="arial"><b>STRUKTUR ORGANISASI SATUAN PENDIDIKAN</b></font></b></P></center>
+        <center><P><b><font color="black" face="arial"><b>SMA NEGERI 6 SOLOK SELATAN</b></font></b></P></center>
+        <center><P><b><font color="black" face="arial"><b>TAHUN 2010</b></b></P></font></center>
+        <div class="blog">
+            <div class="row">
+                <div class="col-md">
+                    <div class="blog-item">
+                    <center><img src="/assets/dist/img/Struktur.jpg" width="700" height="300" alt="" /></center>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+      </div>
     </section>
     <!-- Main content -->
     <section class="content">
@@ -157,7 +199,7 @@
         <h3 class="control-sidebar-heading">Recent Activity</h3>
         <ul class="control-sidebar-menu">
           <li>
-            <a href="/assets/javascript:void(0)">
+            <a href="javascript:void(0)">
               <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
               <div class="menu-info">
@@ -340,20 +382,20 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
-<script src="{{asset('/assets/bower_components/jquery/dist/jquery.min.js')}}"></script>
+<script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="{{asset('/assets/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+<script src="/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- DataTables -->
-<script src="{{asset('/assets/bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('/assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
+<script src="/assets/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <!-- SlimScroll -->
-<script src="{{asset('/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
+<script src="/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
-<script src="{{asset('/assets/bower_components/fastclick/lib/fastclick.js')}}"></script>
+<script src="/assets/bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src="{{asset('/assets/dist/js/adminlte.min.js')}}"></script>
+<script src="/assets/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{asset('/assets/dist/js/demo.js')}}"></script>
+<script src="/assets/dist/js/demo.js"></script>
 <script>
   $(document).ready(function () {
     $('.sidebar-menu').tree()
@@ -372,93 +414,6 @@
     })
   });
 
-  $(window).on('load', function (){
-    // $('#show_nama_guru')();
-    // console.log('guru');
-
-    $.ajax({
-      dataType: "json",
-      url: "{{ url('/admin/guru/dt_guru/view')}}",
-      success: function(data){
-        var guru = jQuery.parseJSON(JSON.stringify(data));
-        console.log(guru);
-
-        $.each(guru, function (v, k) {
-          $('#show_nama_guru')
-                .append($("<option></option>")
-                    .attr("value", k.id)
-                    .text(k.nama_guru));
-        });
-
-      }
-    })
-  })
-
-  $(window).on('load', function (){
-    // $('#show_nama_guru')();
-    // console.log('guru');
-
-    $.ajax({
-      dataType: "json",
-      url: "{{ url('/admin/walkes/wl_kelas/view')}}",
-      success: function(data){
-        var walkes = jQuery.parseJSON(JSON.stringify(data));
-        console.log(walkes);
-
-        $.each(walkes, function (v, k) {
-          $('#show_kelas_walas')
-                .append($("<option></option>")
-                    .attr("value", k.id)
-                    .text(k.kelas_walas));
-        });
-
-      }
-    })
-  })
-
-  $(window).on('load', function (){
-    // $('#show_nama_guru')();
-    // console.log('guru');
-
-    $.ajax({
-      dataType: "json",
-      url: "{{ url('/admin/pelajaran/mt_pelajaran/view')}}",
-      success: function(data){
-        var pelajaran = jQuery.parseJSON(JSON.stringify(data));
-        console.log(pelajaran);
-
-        $.each(pelajaran, function (v, k) {
-          $('#show_mata_pelajaran')
-                .append($("<option></option>")
-                    .attr("value", k.id)
-                    .text(k.mata_pelajaran));
-        });
-
-      }
-    })
-  })
-
-  $(window).on('load', function (){
-    // $('#show_nama_guru')();
-    // console.log('guru');
-
-    $.ajax({
-      dataType: "json",
-      url: "{{ url('/admin/siswa/dt_siswa/view')}}",
-      success: function(data){
-        var siswa = jQuery.parseJSON(JSON.stringify(data));
-        console.log(siswa);
-
-        $.each(siswa, function (v, k) {
-          $('#show_nama_siswa')
-                .append($("<option></option>")
-                    .attr("value", k.id)
-                    .text(k.nama_siswa));
-        });
-
-      }
-    })
-  })
 
 </script>
 </body>
