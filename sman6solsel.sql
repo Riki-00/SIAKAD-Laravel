@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2020 at 07:56 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.2
+-- Waktu pembuatan: 21 Jun 2020 pada 10.47
+-- Versi server: 10.4.10-MariaDB
+-- Versi PHP: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Struktur dari tabel `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -40,7 +40,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -50,17 +50,17 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2019_08_19_000000_create_failed_jobs_table', 1);
+(3, '2014_10_12_000000_create_users_table', 1),
+(4, '2019_08_19_000000_create_failed_jobs_table', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_guru`
+-- Struktur dari tabel `tbl_guru`
 --
 
 CREATE TABLE `tbl_guru` (
@@ -78,7 +78,7 @@ CREATE TABLE `tbl_guru` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_guru`
+-- Dumping data untuk tabel `tbl_guru`
 --
 
 INSERT INTO `tbl_guru` (`id`, `nip`, `nama_guru`, `jenis_kelamin`, `no_telp`, `alamat_guru`, `tempat_lahir`, `tgl_lahir`, `status`, `created_at`, `updated_at`) VALUES
@@ -121,7 +121,7 @@ INSERT INTO `tbl_guru` (`id`, `nip`, `nama_guru`, `jenis_kelamin`, `no_telp`, `a
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_jadwal`
+-- Struktur dari tabel `tbl_jadwal`
 --
 
 CREATE TABLE `tbl_jadwal` (
@@ -140,7 +140,7 @@ CREATE TABLE `tbl_jadwal` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_kelas`
+-- Struktur dari tabel `tbl_kelas`
 --
 
 CREATE TABLE `tbl_kelas` (
@@ -152,7 +152,7 @@ CREATE TABLE `tbl_kelas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_kelas`
+-- Dumping data untuk tabel `tbl_kelas`
 --
 
 INSERT INTO `tbl_kelas` (`id`, `id_siswa`, `id_walas`, `created_at`, `updated_at`) VALUES
@@ -165,7 +165,7 @@ INSERT INTO `tbl_kelas` (`id`, `id_siswa`, `id_walas`, `created_at`, `updated_at
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_nilai`
+-- Struktur dari tabel `tbl_nilai`
 --
 
 CREATE TABLE `tbl_nilai` (
@@ -178,7 +178,7 @@ CREATE TABLE `tbl_nilai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_nilai`
+-- Dumping data untuk tabel `tbl_nilai`
 --
 
 INSERT INTO `tbl_nilai` (`id`, `id_siswa`, `id_pelajaran`, `nilai`, `created_at`, `updated_at`) VALUES
@@ -189,7 +189,7 @@ INSERT INTO `tbl_nilai` (`id`, `id_siswa`, `id_pelajaran`, `nilai`, `created_at`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_pelajaran`
+-- Struktur dari tabel `tbl_pelajaran`
 --
 
 CREATE TABLE `tbl_pelajaran` (
@@ -202,7 +202,7 @@ CREATE TABLE `tbl_pelajaran` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_pelajaran`
+-- Dumping data untuk tabel `tbl_pelajaran`
 --
 
 INSERT INTO `tbl_pelajaran` (`id`, `id_guru`, `mata_pelajaran`, `cakupan`, `created_at`, `updated_at`) VALUES
@@ -229,7 +229,7 @@ INSERT INTO `tbl_pelajaran` (`id`, `id_guru`, `mata_pelajaran`, `cakupan`, `crea
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_pel_perkelas`
+-- Struktur dari tabel `tbl_pel_perkelas`
 --
 
 CREATE TABLE `tbl_pel_perkelas` (
@@ -241,7 +241,7 @@ CREATE TABLE `tbl_pel_perkelas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tbl_pel_perkelas`
+-- Dumping data untuk tabel `tbl_pel_perkelas`
 --
 
 INSERT INTO `tbl_pel_perkelas` (`id`, `id_walas`, `id_matapelajaran`, `created_at`, `updated_at`) VALUES
@@ -255,12 +255,13 @@ INSERT INTO `tbl_pel_perkelas` (`id`, `id_walas`, `id_matapelajaran`, `created_a
 (8, 47, 83, '2020-04-19 04:38:03', '2020-04-19 04:38:03'),
 (9, 47, 84, '2020-04-19 04:38:14', '2020-04-19 04:38:14'),
 (10, 47, 86, '2020-04-19 04:38:27', '2020-04-19 04:38:27'),
-(11, 46, 86, '2020-04-19 07:21:06', '2020-04-19 07:21:06');
+(11, 46, 86, '2020-04-19 07:21:06', '2020-04-19 07:21:06'),
+(12, 46, 96, '2020-06-20 01:25:07', '2020-06-20 01:25:07');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_pengguna`
+-- Struktur dari tabel `tbl_pengguna`
 --
 
 CREATE TABLE `tbl_pengguna` (
@@ -269,7 +270,7 @@ CREATE TABLE `tbl_pengguna` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_pengguna`
+-- Dumping data untuk tabel `tbl_pengguna`
 --
 
 INSERT INTO `tbl_pengguna` (`id`, `foto`) VALUES
@@ -280,7 +281,7 @@ INSERT INTO `tbl_pengguna` (`id`, `foto`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_siswa`
+-- Struktur dari tabel `tbl_siswa`
 --
 
 CREATE TABLE `tbl_siswa` (
@@ -299,7 +300,7 @@ CREATE TABLE `tbl_siswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_siswa`
+-- Dumping data untuk tabel `tbl_siswa`
 --
 
 INSERT INTO `tbl_siswa` (`id`, `nis`, `nama_siswa`, `tempat_lahir`, `tgl_lahir`, `alamat_siswa`, `jenis_kelamin`, `no_hp`, `status_siswa`, `tahun_daftar`, `created_at`, `updated_at`) VALUES
@@ -320,7 +321,7 @@ INSERT INTO `tbl_siswa` (`id`, `nis`, `nama_siswa`, `tempat_lahir`, `tgl_lahir`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_user`
+-- Struktur dari tabel `tbl_user`
 --
 
 CREATE TABLE `tbl_user` (
@@ -337,7 +338,7 @@ CREATE TABLE `tbl_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_user`
+-- Dumping data untuk tabel `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`id`, `username`, `password`, `nama_lengkap`, `jenis_kelamin`, `no_telp`, `alamat_user`, `level`, `created_at`, `updated_at`) VALUES
@@ -349,7 +350,7 @@ INSERT INTO `tbl_user` (`id`, `username`, `password`, `nama_lengkap`, `jenis_kel
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_walas`
+-- Struktur dari tabel `tbl_walas`
 --
 
 CREATE TABLE `tbl_walas` (
@@ -361,7 +362,7 @@ CREATE TABLE `tbl_walas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_walas`
+-- Dumping data untuk tabel `tbl_walas`
 --
 
 INSERT INTO `tbl_walas` (`id`, `nama_walas`, `kelas_walas`, `created_at`, `updated_at`) VALUES
@@ -387,184 +388,193 @@ INSERT INTO `tbl_walas` (`id`, `nama_walas`, `kelas_walas`, `created_at`, `updat
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `role` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `role`, `password`, `created_at`, `updated_at`) VALUES
+(1, 'a', 'a@gmail.com', '2', '$2y$10$KLz5QWitORLlj6c/9F1lLeiaaQZ4nFuYHdNz65MtLZPQcKxKqJKbG', '2020-06-20 02:39:38', '2020-06-20 02:39:38'),
+(2, 'Admin', 'admin@gmail.com', '1', '$2y$10$9m.GlikON0YZXzo4VccnkOqJhQRay2JJv328191B3nqKUcbGbFn52', '2020-06-20 22:22:08', '2020-06-20 22:22:08'),
+(3, 'Joni', 'joni', '3', '$2y$10$etiGKYRWmAxRZv8/ZR/nT./VCfMNYT6Y5.MbGRv0cscCsIu7c9d1C', '2020-06-20 23:47:22', '2020-06-20 23:47:22'),
+(4, 'Doyok', '131100096', '3', '$2y$10$3kSti1oN7.b58f3dOa9pi.CVzEmAvmroyc3Ype5cXuJX8LRPKaCCS', '2020-06-20 23:51:01', '2020-06-20 23:51:01');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `failed_jobs`
+-- Indeks untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_guru`
+-- Indeks untuk tabel `tbl_guru`
 --
 ALTER TABLE `tbl_guru`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_jadwal`
+-- Indeks untuk tabel `tbl_jadwal`
 --
 ALTER TABLE `tbl_jadwal`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_kelas`
+-- Indeks untuk tabel `tbl_kelas`
 --
 ALTER TABLE `tbl_kelas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_nilai`
+-- Indeks untuk tabel `tbl_nilai`
 --
 ALTER TABLE `tbl_nilai`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_pelajaran`
+-- Indeks untuk tabel `tbl_pelajaran`
 --
 ALTER TABLE `tbl_pelajaran`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_pel_perkelas`
+-- Indeks untuk tabel `tbl_pel_perkelas`
 --
 ALTER TABLE `tbl_pel_perkelas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_pengguna`
+-- Indeks untuk tabel `tbl_pengguna`
 --
 ALTER TABLE `tbl_pengguna`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_siswa`
+-- Indeks untuk tabel `tbl_siswa`
 --
 ALTER TABLE `tbl_siswa`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_user`
+-- Indeks untuk tabel `tbl_user`
 --
 ALTER TABLE `tbl_user`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_walas`
+-- Indeks untuk tabel `tbl_walas`
 --
 ALTER TABLE `tbl_walas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
+-- AUTO_INCREMENT untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `tbl_guru`
+-- AUTO_INCREMENT untuk tabel `tbl_guru`
 --
 ALTER TABLE `tbl_guru`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
--- AUTO_INCREMENT for table `tbl_jadwal`
+-- AUTO_INCREMENT untuk tabel `tbl_jadwal`
 --
 ALTER TABLE `tbl_jadwal`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT for table `tbl_kelas`
+-- AUTO_INCREMENT untuk tabel `tbl_kelas`
 --
 ALTER TABLE `tbl_kelas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 
 --
--- AUTO_INCREMENT for table `tbl_nilai`
+-- AUTO_INCREMENT untuk tabel `tbl_nilai`
 --
 ALTER TABLE `tbl_nilai`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
 
 --
--- AUTO_INCREMENT for table `tbl_pelajaran`
+-- AUTO_INCREMENT untuk tabel `tbl_pelajaran`
 --
 ALTER TABLE `tbl_pelajaran`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
--- AUTO_INCREMENT for table `tbl_pel_perkelas`
+-- AUTO_INCREMENT untuk tabel `tbl_pel_perkelas`
 --
 ALTER TABLE `tbl_pel_perkelas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `tbl_pengguna`
+-- AUTO_INCREMENT untuk tabel `tbl_pengguna`
 --
 ALTER TABLE `tbl_pengguna`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
--- AUTO_INCREMENT for table `tbl_siswa`
+-- AUTO_INCREMENT untuk tabel `tbl_siswa`
 --
 ALTER TABLE `tbl_siswa`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
--- AUTO_INCREMENT for table `tbl_user`
+-- AUTO_INCREMENT untuk tabel `tbl_user`
 --
 ALTER TABLE `tbl_user`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `tbl_walas`
+-- AUTO_INCREMENT untuk tabel `tbl_walas`
 --
 ALTER TABLE `tbl_walas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
